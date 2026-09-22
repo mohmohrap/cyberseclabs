@@ -1,0 +1,348 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Vulnerability Identification Lab</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+        }
+
+        header p {
+            margin: 5px 0;
+            color: #d1d5db;
+        }
+
+        .instructions {
+            background: white;
+            border-left: 5px solid #2563eb;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+        }
+
+        .challenge {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .challenge h2 {
+            margin-top: 0;
+            color: #1f2937;
+        }
+
+        .scenario {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 18px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+
+        .code {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: Consolas, monospace;
+        }
+
+        ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 220px;
+            resize: vertical;
+            padding: 15px;
+            margin-top: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+        }
+
+        .answer-label {
+            display: block;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #6b7280;
+            padding: 20px;
+        }
+
+        .warning {
+            color: #92400e;
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            padding: 12px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Cybersecurity Vulnerability Identification Lab</h1>
+        <p>Web Application Security — Practical Exercise</p>
+        <p>Identify vulnerabilities, security weaknesses, impacts, and appropriate controls.</p>
+    </header>
+
+    <section class="instructions">
+        <h2>Instructions</h2>
+        <p>
+            Read each scenario carefully and answer the questions using standard
+            cybersecurity terminology.
+        </p>
+        <p>
+            There is no automated answer checking in this lab. Enter your answers
+            into the textboxes provided.
+        </p>
+<p>
+Take a screenshot of every answer and share them to the class group.
+        </p>
+        <div class="warning">
+            <strong>Note:</strong> Base your answers on the scenario provided.
+            Explain your reasoning rather than providing only a vulnerability name.
+        </div>
+    </section>
+
+
+    <!-- Challenge 1 -->
+    <section class="challenge">
+
+        <h2>Challenge 1 — Credentials</h2>
+
+        <div class="scenario">
+            <p>
+                A web application has a login form. The developer stores usernames
+                and passwords directly in the HTML/ JavaScript code.
+                A student inspecting the page source can see:
+            </p>
+
+            <pre class="code">username = "admin"
+password = "admin123"</pre>
+        </div>
+
+        <p><strong>Task:</strong></p>
+
+        <ol>
+            <li>
+                Identify the security vulnerability class.
+            </li>
+            <li>
+                Explain why this approach is insecure.
+            </li>
+        </ol>
+
+        <label class="answer-label" for="answer1">Answer:</label>
+        <textarea id="answer1"
+                  name="answer1"
+                  placeholder="Type your answer here..."></textarea>
+
+    </section>
+
+
+    <!-- Challenge 2 -->
+    <section class="challenge">
+
+        <h2>Challenge 2 — Password Storage</h2>
+
+        <div class="scenario">
+            <p>
+                A website stores users' passwords using plaintext in its database.
+            </p>
+        </div>
+
+        <p><strong>Task:</strong></p>
+
+        <ol>
+            <li>
+                Identify the security weakness using standard terminology or an
+                appropriate OWASP category.
+            </li>
+            <li>
+                Explain why the weakness violates core security
+                principles and other security objectives if the database is compromised.
+            </li>
+            <li>
+                State the appropriate secure alternative.
+            </li>
+        </ol>
+
+        <label class="answer-label" for="answer2">Answer:</label>
+        <textarea id="answer2"
+                  name="answer2"
+                  placeholder="Type your answer here..."></textarea>
+
+    </section>
+
+
+    <!-- Challenge 3 -->
+    <section class="challenge">
+
+        <h2>Challenge 3 — Password Reset</h2>
+
+        <div class="scenario">
+            <p>
+                An online banking application allows unlimited password-reset
+                attempts and has no mechanism to detect or restrict abuse.
+            </p>
+        </div>
+
+        <p><strong>Task:</strong></p>
+
+        <ol>
+            <li>
+                Identify the security/ design weakness.
+            </li>
+            <li>
+                Identify the security principles that may be affected.
+            </li>
+            <li>
+                Discuss the potential impact on
+                <strong>availability, integrity, and confidentiality</strong>.
+            </li>
+            <li>
+                Design a control set to mitigate the weakness.
+            </li>
+        </ol>
+
+        <label class="answer-label" for="answer3">Answer:</label>
+        <textarea id="answer3"
+                  name="answer3"
+                  placeholder="Type your answer here..."></textarea>
+
+    </section>
+
+
+    <!-- Challenge 4 -->
+    <section class="challenge">
+
+        <h2>Challenge 4 — SSRF</h2>
+
+        <div class="scenario">
+            <p>
+                A web application allows users to provide a URL for the server
+                to fetch, without restricting which internal or external
+                addresses can be accessed.
+            </p>
+        </div>
+
+        <p><strong>Task:</strong></p>
+
+        <ol>
+            <li>
+                What is SSRF.
+            </li>
+            <li>
+                Explain how the vulnerability could expose internal resources.
+            </li>
+            <li>
+                Design a mitigation strategy that prevents unauthorized requests
+                to internal or restricted destinations.
+            </li>
+        </ol>
+
+        <label class="answer-label" for="answer4">Answer:</label>
+        <textarea id="answer4"
+                  name="answer4"
+                  placeholder="Type your answer here..."></textarea>
+
+    </section>
+
+
+    <!-- Challenge 5 -->
+    <section class="challenge">
+
+        <h2>Challenge 5 — Login</h2>
+
+        <div class="scenario">
+            <p>
+                An attacker repeatedly attempts to log into an administrator
+                account, and the application records no failed-login events
+                and generates no alerts.
+            </p>
+        </div>
+
+        <p><strong>Task:</strong></p>
+
+        <ol>
+            <li>
+                Identify the security weakness.
+            </li>
+                      <li>
+                Identify the necessary preventive, detective, and/or responsive
+                controls.
+            </li>
+        </ol>
+
+        <label class="answer-label" for="answer5">Answer:</label>
+        <textarea id="answer5"
+                  name="answer5"
+                  placeholder="Type your answer here..."></textarea>
+
+    </section>
+
+
+    <div class="footer">
+        <p>Cybersecurity Practical Lab — Web Application Security</p>
+    </div>
+
+</div>
+
+</body>
+</html>
+```
